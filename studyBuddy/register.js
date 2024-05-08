@@ -30,7 +30,7 @@ const wrapper = document.querySelector('.wrapper');
 submit.addEventListener("click", function(event){ // )?
     event.preventDefault()
     alert(5) 
-  /*
+  
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -45,5 +45,5 @@ submit.addEventListener("click", function(event){ // )?
         const errorMessage = error.message;
         alert("ERROR")
         // ..
-      }); */
+      }); 
 })
