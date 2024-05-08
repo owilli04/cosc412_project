@@ -27,7 +27,7 @@ const submit = document.getElementById('submitReg');
 const wrapper = document.querySelector('.wrapper');
 
 
-submit.addEventListener("click", function(event)){
+submit.addEventListener("click", function(event){ // )?
     event.preventDefault()
     alert(5) 
   
