@@ -36,6 +36,7 @@ submit.addEventListener("click", function(event)){
       .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
+        alert("Creating account...")
         wrapper.classList.remove('active'); // added from other js file
         // ...
       })
