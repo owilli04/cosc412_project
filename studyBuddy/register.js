@@ -21,7 +21,7 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
 const app = initializeApp(firebaseConfig);
 
 // getting input
-const submit = document.getElementById('submitReg');
+const submit = document.getElementById('submit-register');
 const wrapper = document.querySelector('.wrapper');
 
 
