@@ -23,7 +23,7 @@ const app = initializeApp(firebaseConfig);
 // getting input
 const email = document.getElementById('email').nodeValue;
 const password = document.getElementById('password').nodeValue;
-const submit = document.getElementById('submit');
+const submit = document.getElementById('submitReg');
 const wrapper = document.querySelector('.wrapper');
 
 
