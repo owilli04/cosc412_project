@@ -37,7 +37,7 @@ submit.addEventListener("click", function(event)){
         // Signed up 
         const user = userCredential.user;
         alert("Creating account...")
-        wrapper.classList.remove('active'); // added from other js file
+        //wrapper.classList.remove('active'); // added from other js file
         // ...
       })
       .catch((error) => {
