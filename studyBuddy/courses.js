@@ -4,6 +4,21 @@
 //saveCourses: Saves the current list of courses to localStorage by creating an array of course names and storing it as a JSON string.
 //loadCourses: Loads courses from localStorage and populates the list. This function is called when the page loads to maintain the list state across sessions.
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDdeo9U1XVB-uSIIlJh0q2Rfhja_lJXVV8",
+    authDomain: "study-buddy-7c5ef.firebaseapp.com",
+    projectId: "study-buddy-7c5ef",
+    storageBucket: "study-buddy-7c5ef.appspot.com",
+    messagingSenderId: "452982202209",
+    appId: "1:452982202209:web:1d7bdce643e6d0e67c2f20"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
 document.addEventListener('DOMContentLoaded', function() {
     const courses = ['COSC 101', 'COSC 412', 'MATH 203', 'PHYS 301'];
     const courseDropdown = document.getElementById('courseDropdown');
