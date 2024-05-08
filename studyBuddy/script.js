@@ -8,9 +8,10 @@ registerLink.addEventListener('click', ()=> {
     wrapper.classList.add('active');
 })
 
-loginLink.addEventListener('click', ()=> {
-    wrapper.classList.remove('active');
-})
+// removing this functionality to add to other js file
+//loginLink.addEventListener('click', ()=> {
+//    wrapper.classList.remove('active');
+//})
 
 btnPopup.addEventListener('click', ()=> {
     wrapper.classList.add('active-popup');
