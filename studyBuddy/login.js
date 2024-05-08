@@ -27,8 +27,7 @@ submit.addEventListener("click", function (event) {
     
     const email = document.getElementById('email-login').value;
     const password = document.getElementById('password-login').value;
-
-    alert(email + "\n" + password)
+    
     const auth = getAuth(app);
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
