@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection</title>
+    <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+    <h1>Select Your Courses</h1>
+    <div>
+        <select id="courseDropdown">
+            <!-- Options will be populated by JavaScript -->
+        </select>
+        <button onclick="addCourse()">Add Course</button>
+        <button onclick="deleteSelectedClasses()">Delete Selected</button>
+    </div>
+    <h2>Your Courses</h2>
+    <ul id="myCoursesList">
+        <!-- List of courses will be populated here -->
+    </ul>
+
+    <h1>Email Coursemates</h1>
+    <form id="emailForm">
+        <input type="email" id="recipientEmail" placeholder="Recipient's Email">
+        <textarea id="emailBody" placeholder="Your message"></textarea>
+        <button type="button" onclick="sendEmail()">Send Email</button>
+    </form>
+
+    <script src="courses.js"></script>
+</body>
+</html>
