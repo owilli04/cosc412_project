@@ -13,11 +13,14 @@ const firebaseConfig = {
     projectId: "study-buddy-7c5ef",
     storageBucket: "study-buddy-7c5ef.appspot.com",
     messagingSenderId: "452982202209",
-    appId: "1:452982202209:web:1d7bdce643e6d0e67c2f20"
+    appId: "1:452982202209:web:1d7bdce643e6d0e67c2f20",
+    databaseURL: "https://study-buddy-7c5ef-default-rtdb.firebaseio.com/",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const database = firebase.database();
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const courses = ['COSC 101', 'COSC 412', 'MATH 203', 'PHYS 301'];
