@@ -21,15 +21,14 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
 const app = initializeApp(firebaseConfig);
 
 // getting input
-const email = document.getElementById('email').nodeValue;
-const password = document.getElementById('password').nodeValue;
 const submit = document.getElementById('submitReg');
 const wrapper = document.querySelector('.wrapper');
 
 
 submit.addEventListener("click", function(event){ // )?
     event.preventDefault()
-    alert(5) 
+    const email = document.getElementById('email').nodeValue; // value in vid, not listed in IDE, try next
+    const password = document.getElementById('password').nodeValue;
   
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
