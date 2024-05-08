@@ -39,3 +39,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// getting input
+const email = document.getElementById('email').nodeValue;
+const password = document.getElementById('password').nodeValue;
+const submit = document.getElementById('submit');
+
+submit.addEventListener("click", function(event)){
+    event.preventDefault()
+    alert(5)
+
+}
