@@ -33,6 +33,7 @@ submit.addEventListener("click", function (event) {
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
+            localStorage.setItem('user', userCredential.user);
             window.location.href = "dash.html";
             // ...
         })
