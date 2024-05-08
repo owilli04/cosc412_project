@@ -2,7 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js"; // needed? not in vid
+//import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js"; // needed? not in vid
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
 
 import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
