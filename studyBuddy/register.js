@@ -24,6 +24,8 @@ const app = initializeApp(firebaseConfig);
 const email = document.getElementById('email').nodeValue;
 const password = document.getElementById('password').nodeValue;
 const submit = document.getElementById('submit');
+const wrapper = document.querySelector('.wrapper');
+
 
 submit.addEventListener("click", function(event)){
     event.preventDefault()
@@ -34,6 +36,7 @@ submit.addEventListener("click", function(event)){
       .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
+        wrapper.classList.remove('active'); // added from other js file
         // ...
       })
       .catch((error) => {
