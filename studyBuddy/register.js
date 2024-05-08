@@ -5,7 +5,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js"; // needed? not in vid
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
 
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 // Your web app's Firebase configuration
   const firebaseConfig = {
