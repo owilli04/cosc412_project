@@ -27,7 +27,7 @@ const submit = document.getElementById('submit');
 
 submit.addEventListener("click", function(event){
     event.preventDefault()
-    //alert(5) **
+    alert(5) 
   
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
