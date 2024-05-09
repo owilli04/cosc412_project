@@ -32,11 +32,13 @@ function addCourse() {
     listItem.append(` ${selectedCourse}`);
     list.appendChild(listItem);
 
+    alert(5)
+    // database update:
+    addCourseFB(selectedCourse);
+    
     //addsCourse:  Save the updated list to localStorage
     saveCourses();
 
-    // database update:
-    addCourseFB(listItem);
 }
 
 function deleteSelectedClasses() {
