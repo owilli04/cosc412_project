@@ -19,22 +19,22 @@ const db = getDatabase(app);
 const email = localStorage.getItem("userID");
 
 // need to test these:
-function initUser() { // need to call in register.js somehow to add user when they register
+export function initUser() { // need to call in register.js somehow to add user when they register
   ref(db,"users/").push(email);
 }
-function addCourse(course){
+export function addCourseFB(course){
     const classes = ref(db, "classes/");
     const users = ref(db, "users/");
     ref(classes,course).push(email);
     ref(users, email).push(course);
 }
 
-function getCourses(){
+export function getCourses(){
     const users = ref(db, "users/");
     return db.query(ref(users, email));
 }
 
-function deleteCourse(course){
+export function deleteCourse(course){
     const classes = ref(db, "classes/");
     const users = ref(db, "users/");
     ref(classes,course).remove(email);
