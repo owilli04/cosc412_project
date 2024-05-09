@@ -5,7 +5,7 @@
 //loadCourses: Loads courses from localStorage and populates the list. This function is called when the page loads to maintain the list state across sessions.
 
 document.addEventListener('DOMContentLoaded', function() {
-    const courses = ['COSC 101', 'COSC 412', 'MATH 203', 'PHYS 301'];
+    const courses = ['CIS 377', 'COSC 336', 'COSC 350', 'COSC 412', 'COSC 435', 'COSC 436',];
     const courseDropdown = document.getElementById('courseDropdown');
     courses.forEach(course => {
         let option = new Option(course, course);
