@@ -4,6 +4,9 @@
 //saveCourses: Saves the current list of courses to localStorage by creating an array of course names and storing it as a JSON string.
 //loadCourses: Loads courses from localStorage and populates the list. This function is called when the page loads to maintain the list state across sessions.
 
+// parallel database functionality imported here
+import {addCourseFB, getCourses, deleteCourse} from 'coursesFB.js';
+
 document.addEventListener('DOMContentLoaded', function() {
     const courses = ['CIS 377', 'COSC 336', 'COSC 350', 'COSC 412', 'COSC 435', 'COSC 436',];
     const courseDropdown = document.getElementById('courseDropdown');
@@ -16,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadCourses();
 });
 
-function addCourse() {
+function addCourse() { 
     const courseDropdown = document.getElementById('courseDropdown');
     const selectedCourse = courseDropdown.value;
     const list = document.getElementById('myCoursesList');
@@ -31,6 +34,9 @@ function addCourse() {
 
     //addsCourse:  Save the updated list to localStorage
     saveCourses();
+
+    // database update:
+    addCourseFB(listItem);
 }
 
 function deleteSelectedClasses() {
