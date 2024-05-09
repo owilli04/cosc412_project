@@ -43,7 +43,7 @@ function emailSend(){
         let params = {
             message : document.getElementById('emailBody').value;
             class_name : document.getElementById('courseDropdown').value;
-            sender_name: admin.auth().getUser(localStorage.getItem("userID").then(userRecord => resolve(userRecord.toJSON().email));
+            sender_name: admin.auth().getUser(localStorage.getItem("userID").then(userRecord => resolve(userRecord.toJSON().email)));
             send_to : childSnapshot.key;
         }
         emailjs.send("service_orudvms","template_wf1m5rh",params);
