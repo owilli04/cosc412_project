@@ -7,9 +7,8 @@ const firebaseConfig = {
     projectId: "study-buddy-7c5ef",
     storageBucket: "study-buddy-7c5ef.appspot.com",
     messagingSenderId: "452982202209",
-    appId: "1:452982202209:web:1d7bdce643e6d0e67c2f20",
-    databaseURL: "https://study-buddy-7c5ef-default-rtdb.firebaseio.com/",
-    };
+    appId: "1:452982202209:web:1d7bdce643e6d0e67c2f20"
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -19,11 +18,11 @@ const db = getDatabase(app);
 
 // need to test these:
 function initUser(email) { // need to call in register.js somehow to add user when they register
-  db.push(email);
+  ref(db,"users/").push(email);
 }
 function addCourse(email, course){
-    const user = ref(db, email);
-    user.push(course);
+    const classes = ref(db, "classes/");
+    ref(classes,course).push(email);
 }
 
 function getCourses(email){
