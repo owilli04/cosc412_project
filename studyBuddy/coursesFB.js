@@ -16,15 +16,27 @@ const app = initializeApp(firebaseConfig);
 // Initialize Realtime Database and get a reference to the service
 const db = getDatabase(app);
 
+const email = localStorage.getItem("userID");
+
 // need to test these:
-function initUser(email) { // need to call in register.js somehow to add user when they register
+function initUser() { // need to call in register.js somehow to add user when they register
   ref(db,"users/").push(email);
 }
-function addCourse(email, course){
+function addCourse(course){
     const classes = ref(db, "classes/");
+    const users = ref(db, "users/");
     ref(classes,course).push(email);
+    ref(users, email).push(course);
 }
 
-function getCourses(email){
-    return db.query(ref(db, email));
+function getCourses(){
+    const users = ref(db, "users/");
+    return db.query(ref(users, email));
+}
+
+function deleteCourse(course){
+    const classes = ref(db, "classes/");
+    const users = ref(db, "users/");
+    ref(classes,course).remove(email);
+    ref(users, email).remove(course);
 }
