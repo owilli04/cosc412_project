@@ -13,11 +13,11 @@ Step 1: Ensure that you have the basic software installed that's necessary for r
 Git: For cloning the repository and managing version control.
 A code editor or IDE: Such as Visual Studio Code, JetBrains IntelliJ IDEA, or similar, depending on the programming language used.
 
-Step 2: Cloning the Repository
+Step 2: Cloning the Repository.
 Open a terminal or command prompt and run the following command to clone the repository: git clone https://github.com/owilli04/cosc412_project.git cd cosc412_project
 
 Step 3: Installing required packages
-For our application, we used HTML, JavaScript, and CSS. So download the extensions if you do not have them already installed in your preferred code editor.
+For our application, we used HTML, JavaScript, and CSS. Download these extensions if you do not have them already installed.
 
 Step 4: Running the program:
 After successfully cloning and saving all the files, open the index.html with the live server and you will successfully see the web application.
