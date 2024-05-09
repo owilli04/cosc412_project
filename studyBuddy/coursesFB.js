@@ -35,3 +35,18 @@ export function deleteCourse(course){
     ref(db, "classes/" + course).remove(email);
     ref(db, "users/" + email).remove(course);
 }
+
+function emailSend(){
+    var emails = firebase.database().ref("classes/" + document.getElementById('courseDropdown').value; + "/");
+    emails.once('value').then(function(snapshot) {
+      snapshot.forEach(function(childSnapshot) {
+        let params = {
+            message : document.getElementById('emailBody').value;
+            class_name : document.getElementById('courseDropdown').value;
+            sender_name: admin.auth().getUser(localStorage.getItem("userID").then(userRecord => resolve(userRecord.toJSON().email));
+            send_to : childSnapshot.key;
+        }
+        emailjs.send("service_orudvms","template_wf1m5rh",params);
+      });
+    });
+}
