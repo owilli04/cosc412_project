@@ -8,6 +8,7 @@ Link to website:
 https://owilli04.github.io/cosc412_project/studyBuddy/index.html
 
 Instructions for installing the necessary software/ programs to run the project, the necessary packages to run the project and step by step instructions on how to run the entire code including connecting to the server, etc:
+
 Step 1: Ensure that you have the basic software installed that's necessary for running most code projects, such as:
 Git: For cloning the repository and managing version control.
 A code editor or IDE: Such as Visual Studio Code, JetBrains IntelliJ IDEA, or similar, depending on the programming language used.
