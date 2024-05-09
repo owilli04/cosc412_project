@@ -5,7 +5,7 @@
 //loadCourses: Loads courses from localStorage and populates the list. This function is called when the page loads to maintain the list state across sessions.
 
 // parallel database functionality imported here
-import {addCourseFB, getCourses, deleteCourse} from './coursesFB.js';
+//import {addCourseFB, getCourses, deleteCourse} from './coursesFB.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const courses = ['CIS 377', 'COSC 336', 'COSC 350', 'COSC 412', 'COSC 435', 'COSC 436',];
@@ -32,9 +32,9 @@ function addCourse() {
     listItem.append(` ${selectedCourse}`);
     list.appendChild(listItem);
 
-    alert(5)
+    //alert(5)
     // database update:
-    addCourseFB(selectedCourse);
+    //addCourseFB(selectedCourse);
     
     //addsCourse:  Save the updated list to localStorage
     saveCourses();
