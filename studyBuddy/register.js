@@ -3,7 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 // import function that adds registered user to database
-import {initUser } from "coursesFB.js";
+import {initUser } from "./coursesFB.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
