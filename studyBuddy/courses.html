@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <a href="dash.html">Return to dashboard</a>
     <meta charset="UTF-8">
@@ -7,7 +8,13 @@
     <title>Course Selection</title>
     <link rel="stylesheet" href="courses.css">
 </head>
+
 <body>
+    <h1> TEST</h1>
+    <div>
+        <input type="email" id="test">
+        <button id="testButton">Test initUser</button>
+    </div>
     <h1>Select Your Courses</h1>
     <div>
         <select id="courseDropdown">
@@ -18,9 +25,11 @@
             <option value="COSC435">COSC435</option>
             <option value="COSC436">COSC436</option>
         </select>
-        <button onclick="addCourse()">Add Course</button>
-        <button onclick="deleteSelectedClasses()">Delete Selected</button>
+        <!--getting rid of onclick to follow vid-->
+        <button id="add-course">Add Course</button>
+        <button id="delete-course">Delete Selected</button>
     </div>
+
     <h2>Your Courses</h2>
     <ul id="myCoursesList">
         <!-- List of courses will be populated here -->
@@ -33,7 +42,69 @@
         <button type="button" onclick="emailSend()">Send Email</button>
     </form>
 
-    <script src="courses.js"></script>
-    <script type="module" src="coursesFB.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        import { getDatabase, set, get, update, remove, ref, child} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDdeo9U1XVB-uSIIlJh0q2Rfhja_lJXVV8",
+            authDomain: "study-buddy-7c5ef.firebaseapp.com",
+            databaseURL: "https://study-buddy-7c5ef-default-rtdb.firebaseio.com",
+            projectId: "study-buddy-7c5ef",
+            storageBucket: "study-buddy-7c5ef.appspot.com",
+            messagingSenderId: "452982202209",
+            appId: "1:452982202209:web:1d7bdce643e6d0e67c2f20",
+            databaseURL: "https://study-buddy-7c5ef-default-rtdb.firebaseio.com/"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        //import
+       
+
+        const db = getDatabase();
+
+        var testButton = document.querySelector("#testButton");
+
+        var selectedCourse = document.querySelector("#courseDropdown").value;
+
+        var addButton = document.querySelector("#add-course");
+        
+        var delButton = document.querySelector("#delete-course");
+
+
+        function insertNewUser(){
+            var email = document.querySelector("#test").value;
+            alert(email)
+            set(ref(db,"user/" + email)),({
+                Courses: "TEST"
+            })
+            .then(()=>{
+                alert("user added successfully");
+            })
+            .catch((error)=>{
+                alert(error)
+            });
+        }
+        function findData(){}
+        function updateClassList(){
+
+        }
+        function removeClass(){
+
+        }
+
+        testButton.addEventListener('click', insertNewUser);
+        addButton.addEventListener('click', updateClassList);
+        delButton.addEventListener('click', removeClass);
+    </script>
+
+
 </body>
+
 </html>
