@@ -23,20 +23,15 @@ export function initUser(user) {
   ref(db,"users/").push(user);
 }
 export function addCourseFB(course){
-    const classes = ref(db, "classes/");
-    const users = ref(db, "users/");
-    ref(classes,course).push(email);
-    ref(users, email).push(course);
+    ref(db, "classes/" + course).push(email);
+    ref(db, "users/" + email).push(course);
 }
 
 export function getCourses(){
-    const users = ref(db, "users/");
-    return db.query(ref(users, email));
+    return db.query(ref(db, "users/" + email));
 }
 
 export function deleteCourse(course){
-    const classes = ref(db, "classes/");
-    const users = ref(db, "users/");
-    ref(classes,course).remove(email);
-    ref(users, email).remove(course);
+    ref(db, "classes/" + course).remove(email);
+    ref(db, "users/" + email).remove(course);
 }
