@@ -14,8 +14,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Initialize Realtime Database and get a reference to the service
-const db = getDatabase(app);
-
+const database = getDatabase(app);
+const db = ref(database);
 const email = localStorage.getItem("userID");
 
 // need to test these:
